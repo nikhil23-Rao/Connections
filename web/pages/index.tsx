@@ -9,9 +9,6 @@ const Home: NextPage = () => {
   return (
     <>
       <AnimatedTitle />
-      <div>
-        <Button />
-      </div>
     </>
   );
 };
