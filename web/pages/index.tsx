@@ -1,8 +1,16 @@
 import type { NextPage } from "next";
-import styles from "../styles/Home.module.css";
+import { AnimatedTitle } from "../components/Landing/AnimatedTitle";
+import { Button } from "../components/Landing/Button";
 
 const Home: NextPage = () => {
-  return <div className={styles.container}></div>;
+  return (
+    <>
+      <AnimatedTitle />
+      <div>
+        <Button />
+      </div>
+    </>
+  );
 };
 
 export default Home;
