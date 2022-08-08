@@ -1,26 +1,40 @@
-
-.btn {
-	flex: 1 1 auto;
-	margin: 10px;
-	padding: 30px;
+.buttons {
+	margin: 10%;
 	text-align: center;
-	text-transform: uppercase;
-	transition: 0.5s;
-	background-size: 200% auto;
-	color: white;
-       /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
-	box-shadow: 0 0 20px #eee;
-	border-radius: 10px;
-       }
-      
-      /* Demo Stuff End -> */
-      
-      /* <- Magic Stuff Start */
-      
-      .btn:hover {
-	background-position: right center; /* change the direction of the change here */
-      }
-      
-      .btn-1 {
-	background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
-      }
+    }
+    
+    .btn-hover {
+	width: 200px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+	cursor: pointer;
+	margin: 20px;
+	height: 55px;
+	text-align:center;
+	border: none;
+	background-size: 300% 100%;
+    
+	border-radius: 50px;
+	moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+    }
+    
+    .btn-hover:hover {
+	background-position: 100% 0;
+	moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+    }
+    
+    .btn-hover:focus {
+	outline: none;
+    }
+    
+    .btn-hover.color-1 {
+	background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+	box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+    }
