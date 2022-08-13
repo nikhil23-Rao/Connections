@@ -13,7 +13,7 @@ export const Buttons = () => {
           className="btn-hover color-1"
           style={{ width: 300, height: 180, borderRadius: 5 }}
         >
-          Daily Game
+          Daily Games
         </button>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <button
