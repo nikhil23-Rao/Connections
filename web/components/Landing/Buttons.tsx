@@ -11,16 +11,21 @@ export const Buttons = () => {
       >
         <button
           className="btn-hover color-1"
-          style={{ width: 300, height: 180, borderRadius: 5 }}
+          style={{ width: 300, height: 210, borderRadius: 5 }}
         >
-          Daily Games
+          Play Daily Game
         </button>
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "flex", flexDirection: "column", marginTop: 5 }}>
           <button
             className="btn-hover color-2"
-            style={{ width: 300, height: 100, borderRadius: 5 }}
+            style={{
+              width: 300,
+              height: 100,
+              borderRadius: 5,
+              marginBottom: -5,
+            }}
           >
-            Practice Game
+            Play Random Game
           </button>
           <button
             className="btn-hover color-3"

@@ -5,6 +5,7 @@ import { Buttons } from "../components/Landing/Buttons";
 const Home: NextPage = () => {
   return (
     <>
+      <AnimatedTitle />
       <Buttons />
     </>
   );
