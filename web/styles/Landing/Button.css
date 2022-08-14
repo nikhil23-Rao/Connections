@@ -8,13 +8,11 @@
     .btn-hover {
 	font-family: Open Sans, Impact;
 	letter-spacing: 0.02em;
-	width: 200px;
-	font-size: 20px;
+	font-size: 1.3vw;
 	font-weight: 100;
 	color: #fff;
 	cursor: pointer;
 	margin: 20px;
-	height: 55px;
 	text-align:center;
 	border: none;
 	background-size: 300% 100%;

@@ -12,7 +12,7 @@ letter-spacing: 0.08em;
 
 }
 .text:nth-child(5n+1) {
-  stroke: #F2385A;
+  stroke: #f5234a;
   -webkit-animation-delay: -1.2s;
   animation-delay: -1.2s;
 /* filter: drop-shadow( 2px 2px 2px #F2385A); */
@@ -30,13 +30,13 @@ letter-spacing: 0.08em;
 /* filter: drop-shadow( 2px 2px 2px #E9F1DF); */
 }
 .text:nth-child(5n+4) {
-  stroke: #56D9CD;
+  stroke: #764EA6;
   -webkit-animation-delay: -4.8s;
   animation-delay: -4.8s;
 /* filter: drop-shadow( 2px 2px 2px #56D9CD); */
 }
 .text:nth-child(5n+5) {
-  stroke: #3AA1BF;
+  stroke: #1894b9;
   -webkit-animation-delay: -6s;
   animation-delay: -6s;
 /* filter: drop-shadow( 2px 2px 2px #3AA1BF); */

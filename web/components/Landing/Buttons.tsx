@@ -7,33 +7,31 @@ export const Buttons = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          flexDirection: "column",
         }}
       >
         <button
           className="btn-hover color-1"
-          style={{ width: 300, height: 210, borderRadius: 5 }}
+          style={{ width: "35%", height: 100, borderRadius: 5 }}
         >
           Play Daily Game
         </button>
-        <div style={{ display: "flex", flexDirection: "column", marginTop: 5 }}>
-          <button
-            className="btn-hover color-2"
-            style={{
-              width: 300,
-              height: 100,
-              borderRadius: 5,
-              marginBottom: -5,
-            }}
-          >
-            Play Random Game
-          </button>
-          <button
-            className="btn-hover color-3"
-            style={{ width: 300, height: 100, borderRadius: 5 }}
-          >
-            Play With Friends
-          </button>
-        </div>
+        <button
+          className="btn-hover color-2"
+          style={{
+            width: "35%",
+            height: 100,
+            borderRadius: 5,
+          }}
+        >
+          Play Random Game
+        </button>
+        <button
+          className="btn-hover color-3"
+          style={{ width: "35%", height: 100, borderRadius: 5 }}
+        >
+          Play With Friends
+        </button>
       </div>
     </>
   );

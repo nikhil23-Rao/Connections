@@ -3,7 +3,7 @@ export const AnimatedTitle = () => {
     <>
       <div
         className="container"
-        style={{ marginTop: "-15%", marginBottom: "-29%" }}
+        style={{ marginTop: "-16%", marginBottom: "-29%" }}
       >
         <svg viewBox="0 0 600 300">
           <symbol id="s-text">
