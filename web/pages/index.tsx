@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import { AnimatedTitle } from "../components/Landing/AnimatedTitle";
-import { Button } from "../components/Landing/Button";
+import { Buttons } from "../components/Landing/Buttons";
 
 const Home: NextPage = () => {
   return (
     <>
       <AnimatedTitle />
-      <Button />
+      <Buttons />
     </>
   );
 };
