@@ -1,6 +1,5 @@
 import "../styles/globals.css";
-import "../styles/Landing/AnimatedTitle.css";
-import "../styles/Landing/Button.css";
+import "font-awesome/css/font-awesome.min.css";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
