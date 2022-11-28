@@ -25,6 +25,18 @@ const Home: NextPage = () => {
         document.body.removeChild(to_append);
       }
     });
+    function addStar() {
+      var s = document.createElement("div");
+      s.className = "star";
+      s.style.setProperty("--size", Math.random() * 10 + 3 + "vmin");
+      s.style.left = Math.floor(Math.random() * 100) + "%";
+      s.style.top = Math.floor(Math.random() * 200) + "%";
+      s.onanimationend = function (this: any) {
+        this.remove();
+      };
+      document.body.appendChild(s);
+    }
+    setInterval(addStar, 150);
   }, [typeof window, typeof document]);
 
   return (
@@ -62,7 +74,19 @@ const Home: NextPage = () => {
         }}
         className="center"
       >
-        <main style={{ width: 520, zoom: 1, marginTop: -200, zIndex: 2000 }}>
+        <p
+          style={{
+            color: "#fff",
+            fontWeight: "bold",
+            bottom: 500,
+            fontSize: 28,
+            zIndex: 200000,
+            position: "absolute",
+          }}
+        >
+          A Game Of Speed & Knowledge.
+        </p>
+        <main style={{ width: 520, zoom: 1, zIndex: 2000, marginTop: -100 }}>
           <button style={{ height: 100 }}>
             <span>Daily Game</span>
           </button>
