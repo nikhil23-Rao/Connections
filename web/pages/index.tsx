@@ -11,6 +11,7 @@ const Home: NextPage = () => {
   const [pfpImg, setPfpImg] = useState<string>();
   useEffect(() => {
     getPfpImg(setPfpImg);
+    var browserZoomLevel = Math.round(window.devicePixelRatio * 100);
   }, []);
   useEffect(() => {
     useMousePath();
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
           zoom: 1,
         }}
         className="center mainmenu"
+        id="landing"
       >
         <NavOptions pfpImg={pfpImg!} />
         <AnimatedTitle />
@@ -40,6 +42,7 @@ const Home: NextPage = () => {
           height: "53.5vh",
         }}
         className="center"
+        id="bottom"
       >
         <Slogan />
         <PlayGame />

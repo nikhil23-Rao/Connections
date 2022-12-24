@@ -513,3 +513,20 @@ position: relative;
     background: linear-gradient(50deg, #f00050, #2380ff) !important;
   }
 }
+
+
+#bottom {
+  height: 53.5vh,
+}
+
+/* mac */
+@media (max-width:1440px) {
+  body {
+    zoom:0.9
+  }
+  #bottom {
+  height:70vh !important;
+  }
+  #slogan {
+  }
+}
