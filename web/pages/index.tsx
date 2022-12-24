@@ -3,9 +3,19 @@ import Lottie from "react-lottie";
 import * as animationData from "../constants/connectionanimationdata.json";
 import { AnimatedTitle } from "../components/Landing/AnimatedTitle";
 import { Button } from "../components/Landing/Button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
+  const [pfpImg, setPfpImg] = useState<string>();
+  useEffect(() => {
+    if (localStorage.getItem("pfpImg")) {
+      setPfpImg(localStorage.getItem("pfpImg")!);
+    } else {
+      let seed = Math.random();
+      setPfpImg(seed.toString());
+      localStorage.setItem("pfpImg", seed.toString());
+    }
+  }, []);
   useEffect(() => {
     window.addEventListener("mousemove", function (e) {
       var to_append = document.getElementsByClassName("loader-container")[0];
@@ -25,19 +35,7 @@ const Home: NextPage = () => {
         document.body.removeChild(to_append);
       }
     });
-    function addStar() {
-      var s = document.createElement("div");
-      s.className = "star";
-      s.style.setProperty("--size", Math.random() * 10 + 3 + "vmin");
-      s.style.left = Math.floor(Math.random() * 100) + "%";
-      s.style.top = Math.floor(Math.random() * 200) + "%";
-      s.onanimationend = function (this: any) {
-        this.remove();
-      };
-      document.body.appendChild(s);
-    }
-    setInterval(addStar, 150);
-  }, [typeof window, typeof document]);
+  }, []);
 
   return (
     <>
@@ -52,6 +50,46 @@ const Home: NextPage = () => {
         }}
         className="center mainmenu"
       >
+        <div
+          style={{ position: "absolute", top: 20, right: 50, zIndex: 20000000 }}
+        >
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <i
+              className="fa fa-cog fa-2x"
+              style={{
+                color: "#fff",
+                position: "relative",
+                top: 33,
+                right: 60,
+                cursor: "pointer",
+              }}
+            ></i>
+            <i
+              className="fa fa-question-circle fa-2x"
+              style={{
+                color: "#fff",
+                position: "relative",
+                top: 33,
+                right: 30,
+                cursor: "pointer",
+              }}
+            ></i>
+            {pfpImg && (
+              <img
+                src={`https://avatars.dicebear.com/api/bottts/${pfpImg}.svg`}
+                style={{
+                  width: 100,
+                  height: 100,
+                  border: "5px solid white",
+                  borderRadius: 30,
+                  backgroundColor: "#003756",
+                  cursor: "pointer",
+                }}
+                alt=""
+              />
+            )}
+          </div>
+        </div>
         <svg viewBox="0 0 900 300">
           <symbol id="s-text">
             <text text-anchor="middle" x="50%" y="50%" dy=".35em">
@@ -92,6 +130,17 @@ const Home: NextPage = () => {
           </button>
           <button style={{ height: 100 }}>Practice Match</button>
           <button style={{ height: 100 }}>Multiplayer</button>
+          <div
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+              display: "flex",
+            }}
+          >
+            <p style={{ color: "#fff" }}>
+              A game built by Nikhil Rao & Vinay Rao
+            </p>
+          </div>
         </main>
       </div>
     </>
